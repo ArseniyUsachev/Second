@@ -1,21 +1,19 @@
 public class Instructor {
-    private int age;
     private String name;
 
-    public Instructor(int age, String name) {
-        this.age = age;
-        this.name = name;
-        }
+    private Student[] students = new Student[3];
 
-    public int getAge() {
-        return age;
+    public Instructor(String name) {
+        this.name = name;
     }
 
     public String getName() {
         return name;
     }
 
-    private Student[] students = new Student[3];
+    public Student[] getStudents() {
+        return students;
+    }
 
     void setStudent(int num, Student student) {
         if (num >= 0 || num < 3) {
@@ -26,7 +24,7 @@ public class Instructor {
 
     void printStudents() {
         for (int i = 0; i < students.length; i++) {
-            System.out.println("Name: " + students[i].getName() + "Age: "students[i].getAge() + "Average result" + students[i].getAverageResult());
+            System.out.println("Name: " + students[i].getName() + " Age: " + students[i].getAge() + " Average result: " + students[i].getAverageResult());
 
 
         }
